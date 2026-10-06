@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos · Yiyi Essence</title>
+  <meta name="description" content="Catálogo de maquillaje, skincare, cuidado corporal, cabello, fragancias y accesorios. Busca, filtra y arma tu pedido por WhatsApp.">
+  <link rel="canonical" href="__SITE_URL__/productos.html">
+  <meta name="theme-color" content="#f7e6e8">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Yiyi Essence">
+  <meta property="og:title" content="Productos · Yiyi Essence">
+  <meta property="og:description" content="Catálogo de maquillaje, skincare, cuidado corporal, cabello, fragancias y accesorios. Busca, filtra y arma tu pedido por WhatsApp.">
+  <meta property="og:url" content="__SITE_URL__/productos.html">
+  <meta property="og:image" content="__SITE_URL__/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="__SITE_URL__/assets/images/og-image.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="products">
+  <div id="site-header"></div>
+  <noscript><p style="margin:0;padding:14px 20px;background:#f7e6e8;text-align:center">Esta tienda necesita JavaScript para mostrar el catálogo y la bolsa de compra. Actívalo en tu navegador o escríbenos por WhatsApp.</p></noscript>
+  <main id="main">
+    <section class="pagehead">
+      <div class="container">
+        <nav class="crumbs" aria-label="Migas de pan"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Productos</span></nav>
+        <h1 data-title>Todos los productos</h1>
+        <p data-intro>Explora el catálogo y arma tu pedido. Lo confirmamos por WhatsApp.</p>
+      </div>
+    </section>
+
+    <div class="container shop">
+      <aside class="filters" id="filters" aria-label="Filtros" hidden></aside>
+
+      <section aria-label="Listado de productos">
+        <div class="toolbar">
+          <form class="toolbar__search" role="search" data-search-form>
+            <span data-icon="search" data-size="20" aria-hidden="true"></span>
+            <input type="search" data-search-input placeholder="Buscar en el catálogo…" aria-label="Buscar en el catálogo" autocomplete="off">
+          </form>
+          <button type="button" class="btn btn--ghost" data-open-filters><span data-icon="filter" data-size="18" aria-hidden="true"></span> Filtros</button>
+          <label>
+            <span class="sr-only">Ordenar por</span>
+            <select data-sort aria-label="Ordenar por">
+              <option value="destacados">Destacados</option>
+              <option value="novedades">Novedades</option>
+              <option value="precio-asc">Precio: menor a mayor</option>
+              <option value="precio-desc">Precio: mayor a menor</option>
+              <option value="descuento">Mayor descuento</option>
+              <option value="nombre">Nombre (A–Z)</option>
+              <option value="relevancia">Relevancia</option>
+            </select>
+          </label>
+          <div class="toolbar__count-wrap"><p class="toolbar__count" data-count aria-live="polite"></p></div>
+        </div>
+        <div class="activebar" data-chips></div>
+
+        <div class="grid" data-grid style="margin-top:18px"></div>
+        <div class="nores" data-empty hidden>
+          <div class="empty__icon"><span data-icon="search" data-size="36" aria-hidden="true"></span></div>
+          <h2>No encontramos productos</h2>
+          <p>Prueba con otras palabras o quita algunos filtros.</p>
+          <button type="button" class="btn btn--primary" data-clear-filters>Limpiar filtros</button>
+        </div>
+        <div class="more"><button type="button" class="btn btn--ghost" data-more hidden></button></div>
+      </section>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

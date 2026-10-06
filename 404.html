@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Página no encontrada · Yiyi Essence</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#f7e6e8">
+  <!-- En GitHub Pages esta página se sirve desde cualquier ruta; fijamos la base para que CSS/JS carguen bien. -->
+  <script>
+    (function () {
+      var seg = location.pathname.split("/")[1] || "";
+      var isProject = /\.github\.io$/.test(location.hostname) && seg && seg.indexOf(".") === -1;
+      document.write('<base href="' + (isProject ? "/" + seg + "/" : "/") + '">');
+    })();
+  </script>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="404">
+  <div id="site-header"></div>
+  <main id="main">
+    <div class="container empty" style="padding:70px 20px">
+      <div class="empty__icon"><span data-icon="search" data-size="36" aria-hidden="true"></span></div>
+      <h1>No encontramos esta página</h1>
+      <p>Puede que el enlace sea incorrecto o que la página ya no exista.</p>
+      <p><a class="btn btn--primary" href="index.html">Volver al inicio</a> <a class="btn btn--ghost" href="productos.html">Ver productos</a></p>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

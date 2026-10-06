@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto · Yiyi Essence</title>
+  <meta name="description" content="Contacta a Yiyi Essence por WhatsApp o correo. Consulta disponibilidad, pedidos, entregas, cambios o tus derechos sobre datos personales.">
+  <link rel="canonical" href="__SITE_URL__/contacto.html">
+  <meta name="theme-color" content="#f7e6e8">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Yiyi Essence">
+  <meta property="og:title" content="Contacto · Yiyi Essence">
+  <meta property="og:description" content="Contacta a Yiyi Essence por WhatsApp o correo. Consulta disponibilidad, pedidos, entregas, cambios o tus derechos sobre datos personales.">
+  <meta property="og:url" content="__SITE_URL__/contacto.html">
+  <meta property="og:image" content="__SITE_URL__/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="__SITE_URL__/assets/images/og-image.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="contact">
+  <div id="site-header"></div>
+  <noscript><p style="margin:0;padding:14px 20px;background:#f7e6e8;text-align:center">Esta tienda necesita JavaScript para mostrar el catálogo y la bolsa de compra. Actívalo en tu navegador o escríbenos por WhatsApp.</p></noscript>
+  <main id="main">
+    <section class="pagehead">
+      <div class="container">
+        <nav class="crumbs" aria-label="Migas de pan"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Contacto</span></nav>
+        <h1>Contacto</h1>
+        <p>Escríbenos y te respondemos lo antes posible.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="contactgrid">
+          <div class="contactcard"><span data-icon="whatsapp" data-size="26" aria-hidden="true"></span><div><h3>WhatsApp</h3><p><span data-cfg="contact.whatsappNumber" data-fallback="Número por definir" data-link="tel"></span></p><p><a href="contacto.html" target="_blank" rel="noopener" data-wa-general>Abrir chat de WhatsApp</a></p></div></div>
+          <div class="contactcard"><span data-icon="mail" data-size="26" aria-hidden="true"></span><div><h3>Correo</h3><p><span data-cfg="contact.email" data-fallback="Correo por definir" data-link="mailto"></span></p></div></div>
+          <div class="contactcard"><span data-icon="clock" data-size="26" aria-hidden="true"></span><div><h3>Horario de atención</h3><p><span data-cfg="contact.schedule" data-fallback="Horario por definir"></span></p></div></div>
+          <div class="contactcard" data-show-if="contact.address"><span data-icon="pin" data-size="26" aria-hidden="true"></span><div><h3>Dirección</h3><p><span data-cfg="contact.address"></span></p></div></div>
+        </div>
+
+        <div class="prose" style="margin-top:34px">
+          <h2 style="margin-top:0">Envíanos un mensaje</h2>
+          <p>Completa el formulario y se abrirá WhatsApp con tu mensaje listo para enviar. No guardamos lo que escribes en este formulario.</p>
+        </div>
+        <form class="prose" data-contact-form novalidate style="margin-top:12px">
+          <div class="field">
+            <label for="c-name">Nombre</label>
+            <input id="c-name" name="name" type="text" autocomplete="name" required>
+            <p class="field__error" data-error-for="name"></p>
+          </div>
+          <div class="field">
+            <label for="c-msg">Mensaje</label>
+            <textarea id="c-msg" name="message" required></textarea>
+            <p class="field__error" data-error-for="message"></p>
+          </div>
+          <p class="fineprint"><span data-icon="info" data-size="16" aria-hidden="true"></span> Usaremos tu nombre y mensaje solo para responder tu consulta. Más información en la <a href="pages/privacidad.html">Política de privacidad</a>.</p>
+          <button type="submit" class="btn btn--wa"><span data-icon="whatsapp" data-size="20" aria-hidden="true"></span> Enviar por WhatsApp</button>
+        </form>
+
+        <div class="prose" style="margin-top:34px">
+          <h2>Datos personales y derechos ARCO</h2>
+          <p>Para ejercer tus derechos de acceso, rectificación, cancelación y oposición, escríbenos a <span data-cfg="contact.email" data-fallback="[correo por definir]" data-link="mailto"></span> o por WhatsApp. Conoce el procedimiento en la <a href="pages/privacidad.html#arco">Política de privacidad</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

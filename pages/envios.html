@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es" data-base="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Envíos · Yiyi Essence</title>
+  <meta name="description" content="Información de envíos de Yiyi Essence: zonas de cobertura, tiempos estimados de preparación y entrega, y costos.">
+  <link rel="canonical" href="__SITE_URL__/pages/envios.html">
+  <meta name="theme-color" content="#f7e6e8">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Yiyi Essence">
+  <meta property="og:title" content="Envíos · Yiyi Essence">
+  <meta property="og:description" content="Información de envíos de Yiyi Essence: zonas de cobertura, tiempos estimados de preparación y entrega, y costos.">
+  <meta property="og:url" content="__SITE_URL__/pages/envios.html">
+  <meta property="og:image" content="__SITE_URL__/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="__SITE_URL__/assets/images/og-image.png">
+
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="preload" href="../assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-page="legal">
+  <div id="site-header"></div>
+  <noscript><p style="margin:0;padding:14px 20px;background:#f7e6e8;text-align:center">Esta tienda necesita JavaScript para mostrar el catálogo y la bolsa de compra. Actívalo en tu navegador o escríbenos por WhatsApp.</p></noscript>
+  <main id="main">
+    <section class="pagehead">
+      <div class="container">
+        <nav class="crumbs" aria-label="Migas de pan"><a href="../index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Envíos</span></nav>
+        <h1>Envíos</h1>
+        <p>Cobertura, tiempos y costos de entrega. Todo se confirma por WhatsApp al coordinar tu pedido.</p>
+      </div>
+    </section>
+    <div class="container legal-grid">
+      <aside class="toc" aria-label="Contenido de la página"><strong>Contenido</strong><ol><li><a href="#resumen">Resumen</a></li><li><a href="#zonas">Zonas de cobertura y costos</a></li><li><a href="#proceso">Cómo coordinamos la entrega</a></li><li><a href="#ausente">Si no te encuentras al momento de la entrega</a></li><li><a href="#estimados">Tiempos estimados</a></li><li><a href="#recepcion">Al recibir tu pedido</a></li></ol></aside>
+      <article class="prose">
+        <p class="muted"><small>Última actualización: <span data-cfg="legal.lastUpdated" data-fallback="[fecha por definir]"></span></small></p>
+        <h2 id="resumen">1. Resumen</h2>
+        <div class="infocards">
+          <div class="infocard"><h3><span data-icon="clock" data-size="20" aria-hidden="true"></span> Preparación</h3><p><span data-cfg="shipping.prepTime" data-fallback="Por definir"></span></p></div>
+          <div class="infocard"><h3><span data-icon="truck" data-size="20" aria-hidden="true"></span> Entrega</h3><p><span data-cfg="shipping.deliveryTime" data-fallback="Por definir"></span></p></div>
+          <div class="infocard" data-show-if="shipping.freeShippingFrom"><h3><span data-icon="gift" data-size="20" aria-hidden="true"></span> Envío gratis</h3><p>Desde S/ <span data-cfg="shipping.freeShippingFrom"></span> en compras elegibles.</p></div>
+          <div class="infocard" data-show-if="shipping.pickup"><h3><span data-icon="pin" data-size="20" aria-hidden="true"></span> Recojo</h3><p>Disponible. Coordina el punto y horario por WhatsApp.</p></div>
+        </div>
+
+        <h2 id="zonas">2. Zonas de cobertura y costos</h2>
+        <div data-zones></div>
+        <p>El costo puede variar según el distrito. Te confirmamos el monto exacto por WhatsApp antes de que pagues.</p>
+
+        <h2 id="proceso">3. Cómo coordinamos la entrega</h2>
+        <ol>
+          <li>Envías tu pedido por WhatsApp con tu distrito y referencia de entrega.</li>
+          <li>Confirmamos disponibilidad, costo de envío y forma de pago.</li>
+          <li>Preparamos el pedido y coordinamos día y horario de entrega.</li>
+        </ol>
+
+        <h2 id="ausente">4. Si no te encuentras al momento de la entrega</h2>
+        <p><span data-cfg="shipping.notAvailableNote"></span></p>
+
+        <h2 id="estimados">5. Tiempos estimados</h2>
+        <p>Los tiempos son <strong>estimados</strong> y pueden variar por circunstancias externas: tráfico, clima, disponibilidad del transporte, fechas de alta demanda o dirección de entrega. Te avisaremos si hay algún retraso importante.</p>
+
+        <h2 id="recepcion">6. Al recibir tu pedido</h2>
+        <p>Revisa que el empaque esté en buen estado. Si notas algún problema, avísanos cuanto antes siguiendo <a href="cambios.html#procedimiento">este procedimiento</a>.</p>
+      </article>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/whatsapp.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/catalog.js"></script>
+  <script src="../js/cookies.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

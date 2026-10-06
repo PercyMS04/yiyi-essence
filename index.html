@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es" data-base="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yiyi Essence · Belleza, cuidado y esencia en un solo lugar</title>
+  <meta name="description" content="Maquillaje, skincare, cuidado corporal, cabello y fragancias. Elige tus productos y confirma tu pedido por WhatsApp en Yiyi Essence.">
+  <link rel="canonical" href="__SITE_URL__/">
+  <meta name="theme-color" content="#f7e6e8">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Open Graph / redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Yiyi Essence">
+  <meta property="og:title" content="Yiyi Essence · Belleza, cuidado y esencia en un solo lugar">
+  <meta property="og:description" content="Maquillaje, skincare, cuidado corporal, cabello y fragancias. Elige tus productos y confirma tu pedido por WhatsApp en Yiyi Essence.">
+  <meta property="og:url" content="__SITE_URL__/">
+  <meta property="og:image" content="__SITE_URL__/assets/images/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="__SITE_URL__/assets/images/og-image.png">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/jost-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Store","@id":"__SITE_URL__/#store","name":"Yiyi Essence","description":"Tienda online de maquillaje, skincare, cuidado corporal, cabello y fragancias. Pedidos confirmados por WhatsApp.","url":"__SITE_URL__/","image":"__SITE_URL__/assets/images/og-image.png","areaServed":{"@type":"Country","name":"Perú"},"priceRange":"S/"},{"@type":"WebSite","@id":"__SITE_URL__/#website","url":"__SITE_URL__/","name":"Yiyi Essence","inLanguage":"es-PE","potentialAction":{"@type":"SearchAction","target":"__SITE_URL__/productos.html?q={search_term_string}","query-input":"required name=search_term_string"}}]}</script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+  <noscript><p style="margin:0;padding:14px 20px;background:#f7e6e8;text-align:center">Esta tienda necesita JavaScript para mostrar el catálogo y la bolsa de compra. Actívalo en tu navegador o escríbenos por WhatsApp.</p></noscript>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="eyebrow">Belleza · Cuidado · Fragancias</span>
+          <h1 id="hero-title">Tu rutina de belleza, con <em>esencia</em></h1>
+          <p>Maquillaje, skincare, cuidado corporal y fragancias seleccionados para ti. Arma tu bolsa y confirma tu pedido por WhatsApp.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="productos.html">Comprar ahora</a>
+            <a class="btn btn--ghost btn--lg" href="#destacados">Ver productos</a>
+          </div>
+          <p class="hero__note"><span data-icon="whatsapp" data-size="18" aria-hidden="true"></span> Sin pagos con tarjeta en la web: coordinas pago y entrega por WhatsApp.</p>
+        </div>
+        <div class="hero__media">
+          <img src="assets/images/hero.svg" alt="Ilustración de productos de belleza en tonos rosa, lavanda y champagne" width="900" height="780" fetchpriority="high">
+        </div>
+      </div>
+    </section>
+
+    <div class="trustbar">
+      <div class="container">
+        <ul class="trust">
+          <li><span data-icon="whatsapp" data-size="22" aria-hidden="true"></span><span><strong>Pedido por WhatsApp</strong>Atención directa y personalizada</span></li>
+          <li><span data-icon="shield" data-size="22" aria-hidden="true"></span><span><strong>Sin datos de tarjeta</strong>Nunca los pedimos en el sitio</span></li>
+          <li><span data-icon="truck" data-size="22" aria-hidden="true"></span><span><strong>Entrega coordinada</strong>Acordamos zona y horario contigo</span></li>
+          <li><span data-icon="check" data-size="22" aria-hidden="true"></span><span><strong>Disponibilidad confirmada</strong>Verificamos tu pedido antes de cobrar</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section" id="categorias" aria-labelledby="cats-title">
+      <div class="container">
+        <div class="section__head"><div><h2 id="cats-title">Compra por categoría</h2><p>Encuentra lo que buscas más rápido.</p></div></div>
+        <div class="catgrid" data-home-cats></div>
+      </div>
+    </section>
+
+    <section class="section section--white" id="destacados" aria-labelledby="feat-title">
+      <div class="container">
+        <div class="section__head">
+          <div><h2 id="feat-title">Destacados</h2><p>Los favoritos de nuestra tienda.</p></div>
+          <a class="more-link" href="productos.html">Ver todos <span data-icon="arrow" data-size="18" aria-hidden="true"></span></a>
+        </div>
+        <div class="grid grid--4" data-home-featured></div>
+      </div>
+    </section>
+
+    <section class="section" data-section-offers aria-labelledby="offers-title">
+      <div class="container">
+        <div class="section__head">
+          <div><h2 id="offers-title">Ofertas</h2><p>Precios especiales por tiempo limitado.</p></div>
+          <a class="more-link" href="productos.html?cat=ofertas">Ver ofertas <span data-icon="arrow" data-size="18" aria-hidden="true"></span></a>
+        </div>
+        <div class="grid grid--4" data-home-offers></div>
+      </div>
+    </section>
+
+    <section class="section section--blush" aria-labelledby="how-title">
+      <div class="container">
+        <div class="section__head"><div><h2 id="how-title">Cómo pedir</h2><p>Comprar en Yiyi Essence es simple.</p></div></div>
+        <ol class="steps">
+          <li><strong>Elige</strong><span>Explora el catálogo, busca y filtra por categoría, marca o precio.</span></li>
+          <li><strong>Revisa tu bolsa</strong><span>Ajusta cantidades y verifica tu pedido antes de enviarlo.</span></li>
+          <li><strong>Envía por WhatsApp</strong><span>Completa tus datos básicos y se abrirá WhatsApp con el pedido listo.</span></li>
+          <li><strong>Confirmamos</strong><span>Te confirmamos disponibilidad, forma de pago y entrega.</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="new-title">
+      <div class="container">
+        <div class="section__head">
+          <div><h2 id="new-title">Novedades</h2><p>Lo último que llegó a la tienda.</p></div>
+          <a class="more-link" href="productos.html?sort=novedades">Ver novedades <span data-icon="arrow" data-size="18" aria-hidden="true"></span></a>
+        </div>
+        <div class="grid grid--4" data-home-new></div>
+      </div>
+    </section>
+
+    <section class="section section--white section--tight" aria-labelledby="brands-title">
+      <div class="container">
+        <div class="section__head"><div><h2 id="brands-title">Marcas</h2></div></div>
+        <div class="brandchips" data-home-brands></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="ctaband">
+          <div>
+            <h2>¿Dudas sobre un producto?</h2>
+            <p>Escríbenos por WhatsApp y te ayudamos a elegir.</p>
+          </div>
+          <a class="btn btn--light btn--lg" href="contacto.html" target="_blank" rel="noopener" data-wa-general><span data-icon="whatsapp" data-size="20" aria-hidden="true"></span> Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/cookies.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
