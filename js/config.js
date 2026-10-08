@@ -74,7 +74,7 @@ window.YIYI_CONFIG = {
   shipping: {
     prepTime: "12 a 24 horas hábiles", // Ej.: "24 a 48 horas hábiles"
     deliveryTime: "1 a 3 días hábiles según el distrito", // Ej.: "1 a 3 días hábiles según el distrito"
-    freeShippingFrom: "Envío gratis desde S/ 199.", // Ej.: 199 → envío gratis desde S/ 199. null = no hay.
+    freeShippingFrom: 199, // Ej.: 199 → envío gratis desde S/ 199. null = no hay.
     pickup: true, // true si ofreces recojo en punto de entrega
     // Zonas de cobertura. cost: número (S/) o null = "se confirma por WhatsApp".
     zones: [
@@ -91,6 +91,18 @@ window.YIYI_CONFIG = {
      null = "por definir" (no se inventa un plazo). Revísalo con tu asesor legal. */
   returns: {
     reportWindowDays: null,
+  },
+
+  /* ---------- Promociones y banners ----------
+     autoplayMs: cada cuántos milisegundos cambian los banners y la franja
+     superior (4000 = 4 segundos).
+     topbarMessages: frases de la franja superior. Si lo dejas vacío [], se
+     generan solas con los datos de arriba (envío gratis, recojo, pagos).
+     Cada frase: { text: "...", href: "enlace opcional" }.
+     No escribas descuentos ni plazos que no sean reales.                      */
+  promo: {
+    autoplayMs: 4000,
+    topbarMessages: [],
   },
 
   /* ---------- Carrito / pedidos ---------- */

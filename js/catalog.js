@@ -345,7 +345,7 @@
             '<button type="button" data-pdp-qty="-1" aria-label="Disminuir cantidad"' + (out ? " disabled" : "") + ">" + Y.UI.icon("minus", 18) + "</button>" +
             '<span class="qty__n" data-pdp-n aria-live="polite">1</span>' +
             '<button type="button" data-pdp-qty="1" aria-label="Aumentar cantidad"' + (out ? " disabled" : "") + ">" + Y.UI.icon("plus", 18) + "</button></div>" +
-          '<button type="button" class="btn btn--primary btn--lg" data-add="' + esc(p.id) + '" data-qty-value="1" data-pdp-add' + (out ? " disabled" : "") + '><span class="btn__label">' + (out ? "Agotado" : "Agregar al carrito") + "</span></button>" +
+          '<button type="button" class="btn btn--primary btn--lg" data-add="' + esc(p.id) + '" data-qty-value="1" data-pdp-add' + (out ? " disabled" : "") + '><span class="btn__label">' + (out ? "Agotado" : "Agregar a la bolsa") + "</span></button>" +
         "</div>" +
         '<a class="btn btn--wa btn--block" href="' + esc(waHref) + '" target="_blank" rel="noopener" data-wa-product="' + esc(p.id) + '">' + Y.UI.icon("whatsapp", 20) + " Consultar disponibilidad por WhatsApp</a>" +
         '<ul class="pdp__trust">' +

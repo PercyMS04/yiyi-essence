@@ -116,3 +116,30 @@
   .modal__panel { max-height: calc(100vh - 16px); }
   .hero__inner { padding-block: 24px; }
 }
+
+/* ---------- NUEVO · Carruseles y franjas (tablet / laptop) ---------- */
+@media (min-width: 640px) {
+  .topbar__track { height: 40px; }
+  .banner__copy { padding: 34px 40px 56px; }
+  .promostrip { grid-template-columns: 1fr 1fr; gap: 0; padding: 12px 24px; }
+  .promostrip__item + .promostrip__item { border-top: 0; border-left: 1px solid rgba(143, 77, 94, 0.22); }
+  .promostrip__item:only-child { grid-column: 1 / -1; }
+  .carousel--banners .carousel__arrow { display: grid; }
+}
+
+@media (min-width: 960px) {
+  .hero { padding: 26px 0 40px; }
+  .banner { grid-template-columns: 1.05fr 0.95fr; min-height: 470px; }
+  .banner__copy { order: 1; text-align: left; padding: 48px 20px 64px 92px; }
+  .banner__copy h1, .banner__copy h2 { font-size: clamp(2.8rem, 4.4vw, 4.2rem); }
+  .banner__copy p { margin: 0; font-size: 1.14rem; max-width: 460px; }
+  .banner__cta { justify-content: flex-start; margin-top: 26px; }
+  .banner__media { order: 2; padding: 30px 56px 30px 10px; align-items: center; }
+  .banner__media--arch img { width: min(340px, 100%); height: 410px; }
+  .banner__disc { width: min(380px, 100%); }
+  .carousel--banners .carousel__arrow--prev { left: 16px; }
+  .carousel--banners .carousel__arrow--next { right: 16px; }
+  .carousel--banners .carousel__bar { bottom: 18px; }
+  .carousel--cards .carousel__arrow--prev { left: -22px; }
+  .carousel--cards .carousel__arrow--next { right: -22px; }
+}

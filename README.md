@@ -143,3 +143,11 @@ Todas las rutas son relativas, así que funciona igual en un dominio propio, en 
 - No se piden ni almacenan tarjetas, CVV, contraseñas ni datos bancarios.
 - No hay claves privadas ni tokens en el código. El número de WhatsApp es un dato público.
 - Las fuentes están alojadas en `assets/fonts` (sin servicios externos de terceros).
+
+## Banners, franja superior y barra fija móvil
+
+- **Banners principales** (`index.html`, sección `.hero`): carrusel con fundido, cambia solo cada 4 s, con flechas, puntos y botón de pausa. Cada banner es un `<li class="carousel__slide">`: copia uno para agregar más.
+- **Tus fotos:** reemplaza los archivos de `imagenes/` (1.jpg … 9.jpg) conservando el nombre, o cambia el `src` de cada `<img>`. Fotos de producto con fondo blanco usan `banner__disc`; fotos de ambiente usan `banner__media--arch`.
+- **Carrusel de tarjetas** ("Descubre en Yiyi Essence"): desliza solo cada 4 s (1 tarjeta en celular, 2 en tablet, 3 en computadora).
+- **Franja superior:** rota frases. Se generan solas desde `js/config.js` (envío gratis, recojo, pagos, ofertas). Para escribir las tuyas usa `promo.topbarMessages`. El tiempo se cambia en `promo.autoplayMs`.
+- **Barra fija en celular** (`js/promo.js`): en todo el sitio muestra "Comprar por WhatsApp" + "Bolsa" (y pasa a "Pedir por WhatsApp · total" cuando hay productos en la bolsa). En la página de producto muestra precio + "Agregar a la bolsa" + WhatsApp.

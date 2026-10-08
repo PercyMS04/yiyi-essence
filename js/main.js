@@ -105,6 +105,11 @@
 
     // Iconos declarativos en el HTML estático
     inlineIcons(document);
+
+    // Franja superior rotativa, barra fija móvil, franja de servicios y efectos
+    if (Y.Promo) Y.Promo.init();
+    // Carruseles (banners y tarjetas) solo si la página los tiene
+    if (Y.Carousel) Y.Carousel.init();
     claimsLinks();
     contactForm();
 

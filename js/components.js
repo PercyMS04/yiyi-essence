@@ -23,6 +23,10 @@
     check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
     chevron: '<path d="m6 9 6 6 6-6"/>',
     arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    chevL: '<path d="m15 5-7 7 7 7"/>',
+    chevR: '<path d="m9 5 7 7-7 7"/>',
+    pause: '<path d="M8 5v14M16 5v14"/>',
+    play: '<path d="M8 5l11 7-11 7V5Z"/>',
     whatsapp: '<path d="M4 20l1.4-4.2A8 8 0 1 1 8.4 18.8L4 20Z"/><path d="M9.2 8.6c-.2.9.4 2.3 1.6 3.5 1.2 1.2 2.6 1.8 3.5 1.6.5-.1.9-.5 1-.9l-1.5-1-.8.6c-.7-.3-1.4-.9-1.7-1.7l.6-.8-1-1.5c-.4.1-.8.4-.9.9Z"/>',
     truck: '<path d="M3 6h11v10H3zM14 9h4l3 3v4h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/>',
     shield: '<path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/>',
@@ -190,7 +194,7 @@
           '<p class="stock stock--' + st.cls + '"><span class="dot" aria-hidden="true"></span>' + st.text + "</p>" +
           '<div class="card__actions">' +
             '<button type="button" class="btn btn--primary btn--sm" data-add="' + esc(p.id) + '"' + (out ? " disabled" : "") + ">" +
-              '<span class="btn__label">' + (out ? "No disponible" : "Agregar al carrito") + "</span></button>" +
+              '<span class="btn__label">' + (out ? "No disponible" : "Agregar a la bolsa") + "</span></button>" +
             '<a class="btn btn--ghost btn--icon" href="' + esc(waHref) + '" target="_blank" rel="noopener" data-wa-product="' + esc(p.id) + '" ' +
               'aria-label="Consultar por WhatsApp: ' + esc(p.name) + '" title="Consultar por WhatsApp">' + icon("whatsapp", 20) + "</a>" +
           "</div>" +
@@ -235,9 +239,13 @@
     var page = document.body.getAttribute("data-page") || "";
     var wrap = document.getElementById("site-header");
     if (!wrap) return;
+    var freeFrom = Number(CFG.shipping && CFG.shipping.freeShippingFrom);
+    var topMsg = freeFrom > 0
+      ? "<strong>Envío gratis desde " + esc(U.money(freeFrom).replace(/\.00$/, "")) + "</strong> · Confirma tu pedido por WhatsApp"
+      : "Elige tus productos y confirma tu pedido por WhatsApp";
     wrap.innerHTML =
       '<a class="skip" href="#main">Saltar al contenido</a>' +
-      '<div class="topbar"><p>' + icon("whatsapp", 15) + " Elige tus productos y confirma tu pedido por WhatsApp</p></div>" +
+      '<div class="topbar" data-topbar role="region" aria-label="Avisos de la tienda"><div class="topbar__track"><p class="topbar__item is-active">' + icon("whatsapp", 15) + " " + topMsg + "</p></div></div>" +
       '<header class="header" id="header"><div class="header__inner container">' +
         '<button type="button" class="iconbtn header__menu" aria-label="Abrir menú" aria-controls="mobile-menu" data-open-menu>' + icon("menu", 24) + "</button>" +
         '<a class="logo" href="' + U.url("index.html") + '" aria-label="' + esc(CFG.store.name) + ' · Inicio">' +

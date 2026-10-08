@@ -32,20 +32,90 @@
   <div id="site-header"></div>
   <noscript><p style="margin:0;padding:14px 20px;background:#f7e6e8;text-align:center">Esta tienda necesita JavaScript para mostrar el catálogo y la bolsa de compra. Actívalo en tu navegador o escríbenos por WhatsApp.</p></noscript>
   <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <span class="eyebrow">Belleza · Cuidado · Fragancias</span>
-          <h1 id="hero-title">Tu rutina de belleza, con <em>esencia</em></h1>
-          <p>Maquillaje, skincare, cuidado corporal y fragancias seleccionados para ti. Arma tu bolsa y confirma tu pedido por WhatsApp.</p>
-          <div class="hero__cta">
-            <a class="btn btn--primary btn--lg" href="productos.html">Comprar ahora</a>
-            <a class="btn btn--ghost btn--lg" href="#destacados">Ver productos</a>
+    <!-- ============ BANNERS PRINCIPALES (carrusel con fundido, 4 s) ============
+         Para usar tus propias fotos: reemplaza los archivos de la carpeta /imagenes
+         (o cambia el src de cada <img>). Edita los textos directamente aquí. -->
+    <section class="hero" aria-label="Novedades y ofertas">
+      <div class="container">
+        <div class="carousel carousel--banners" data-carousel="fade" aria-label="Banners destacados">
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+
+              <li class="carousel__slide banner banner--rose">
+                <div class="banner__copy">
+                  <span class="eyebrow">Belleza · Cuidado · Fragancias</span>
+                  <h1 id="hero-title">Tu rutina de belleza, con <em>esencia</em></h1>
+                  <p>Maquillaje, skincare, cuidado corporal y fragancias seleccionados para ti. Arma tu bolsa y confirma tu pedido por WhatsApp.</p>
+                  <div class="banner__cta">
+                    <a class="btn btn--primary btn--lg" href="productos.html">Comprar ahora</a>
+                    <a class="btn btn--ghost btn--lg" href="#destacados">Ver destacados</a>
+                  </div>
+                </div>
+                <div class="banner__media banner__media--arch">
+                  <img src="imagenes/5.jpg" alt="Productos de cuidado de la piel sobre un fondo beige con ramas secas" width="463" height="662" fetchpriority="high">
+                </div>
+              </li>
+
+              <li class="carousel__slide banner banner--lavender">
+                <div class="banner__copy">
+                  <span class="eyebrow">Maquillaje</span>
+                  <h2>Colores que <em>enamoran</em></h2>
+                  <p>Labios, rostro, ojos y uñas: encuentra el look que va contigo.</p>
+                  <div class="banner__cta">
+                    <a class="btn btn--primary btn--lg" href="productos.html?cat=maquillaje">Ver maquillaje</a>
+                  </div>
+                </div>
+                <div class="banner__media banner__media--arch">
+                  <img src="imagenes/3.jpg" alt="Maquillaje, brochas y sombras sobre un fondo de colores pastel" width="400" height="400" loading="lazy">
+                </div>
+              </li>
+
+              <li class="carousel__slide banner banner--champagne">
+                <div class="banner__copy">
+                  <span class="eyebrow">Rostro</span>
+                  <h2>Un acabado <em>luminoso</em> todo el día</h2>
+                  <p>Bases, correctores y polvos para una piel que se ve y se siente cómoda.</p>
+                  <div class="banner__cta">
+                    <a class="btn btn--primary btn--lg" href="productos.html?cat=maquillaje">Descubrir bases</a>
+                    <a class="btn btn--ghost btn--lg" href="productos.html?sort=novedades">Novedades</a>
+                  </div>
+                </div>
+                <div class="banner__media banner__media--disc">
+                  <div class="banner__disc"><img src="imagenes/2.jpg" alt="Base de maquillaje fluida en frasco con tapa negra" width="1000" height="1000" loading="lazy"></div>
+                </div>
+              </li>
+
+              <li class="carousel__slide banner banner--blush">
+                <div class="banner__copy">
+                  <span class="eyebrow">Skincare</span>
+                  <h2>Cuida tu piel, <em>cada día</em></h2>
+                  <p>Sérums, hidratantes y protección solar para armar tu rutina paso a paso.</p>
+                  <div class="banner__cta">
+                    <a class="btn btn--primary btn--lg" href="productos.html?cat=skincare">Ver skincare</a>
+                  </div>
+                </div>
+                <div class="banner__media banner__media--arch">
+                  <img src="imagenes/4.jpg" alt="Cremas y sérum de skincare sobre pétalos rosados" width="400" height="533" loading="lazy">
+                </div>
+              </li>
+
+              <li class="carousel__slide banner banner--deep">
+                <div class="banner__copy">
+                  <span class="eyebrow">Ofertas</span>
+                  <h2>Precios <em>especiales</em> por tiempo limitado</h2>
+                  <p>Aprovecha las ofertas en productos seleccionados y pídelas directo por WhatsApp.</p>
+                  <div class="banner__cta">
+                    <a class="btn btn--light btn--lg" href="productos.html?cat=ofertas">Ver ofertas</a>
+                    <a class="btn btn--wa btn--lg" href="contacto.html" target="_blank" rel="noopener" data-wa-general><span data-icon="whatsapp" data-size="20" aria-hidden="true"></span> Escribirnos</a>
+                  </div>
+                </div>
+                <div class="banner__media banner__media--disc">
+                  <div class="banner__disc"><img src="imagenes/8.jpg" alt="Máscara de pestañas con volumen" width="1000" height="1000" loading="lazy"></div>
+                </div>
+              </li>
+
+            </ul>
           </div>
-          <p class="hero__note"><span data-icon="whatsapp" data-size="18" aria-hidden="true"></span> Sin pagos con tarjeta en la web: coordinas pago y entrega por WhatsApp.</p>
-        </div>
-        <div class="hero__media">
-          <img src="assets/images/hero.svg" alt="Ilustración de productos de belleza en tonos rosa, lavanda y champagne" width="900" height="780" fetchpriority="high">
         </div>
       </div>
     </section>
@@ -60,6 +130,27 @@
         </ul>
       </div>
     </div>
+
+    <!-- ============ CARRUSEL DE TARJETAS (desliza solo cada 4 s) ============ -->
+    <section class="section section--tight" aria-labelledby="disc-title">
+      <div class="container">
+        <div class="section__head"><div><h2 id="disc-title">Descubre en Yiyi Essence</h2><p>Lo que más buscan nuestras clientas, a un toque.</p></div></div>
+        <div class="carousel carousel--cards" data-carousel="slide" data-per-view="1,2,3" aria-label="Selección de la tienda">
+          <div class="carousel__viewport">
+            <ul class="carousel__track">
+              <li class="carousel__slide"><a class="tile tile--blush" href="productos.html?cat=cuidado-facial"><span class="tile__img"><img src="imagenes/1.jpg" alt="" width="1000" height="1000" loading="lazy"></span><span class="tile__body"><strong>Limpieza y tónicos</strong><span class="tile__cta">¡Comprar aquí!</span></span></a></li>
+              <li class="carousel__slide"><a class="tile tile--lavender" href="productos.html?cat=maquillaje"><span class="tile__img"><img src="imagenes/8.jpg" alt="" width="1000" height="1000" loading="lazy"></span><span class="tile__body"><strong>Pestañas con volumen</strong><span class="tile__cta">¡Comprar aquí!</span></span></a></li>
+              <li class="carousel__slide"><a class="tile tile--champagne" href="productos.html?cat=skincare"><span class="tile__img"><img src="imagenes/9.jpg" alt="" width="300" height="300" loading="lazy"></span><span class="tile__body"><strong>Protección solar diaria</strong><span class="tile__cta">¡Comprar aquí!</span></span></a></li>
+              <li class="carousel__slide"><a class="tile tile--cream" href="productos.html?cat=maquillaje"><span class="tile__img"><img src="imagenes/2.jpg" alt="" width="1000" height="1000" loading="lazy"></span><span class="tile__body"><strong>Bases y rostro</strong><span class="tile__cta">¡Comprar aquí!</span></span></a></li>
+              <li class="carousel__slide"><a class="tile tile--blush" href="productos.html?cat=maquillaje"><span class="tile__img"><img src="imagenes/6.jpg" alt="" width="1000" height="1000" loading="lazy"></span><span class="tile__body"><strong>Favoritos para tu bolso</strong><span class="tile__cta">¡Comprar aquí!</span></span></a></li>
+              <li class="carousel__slide"><a class="tile tile--lavender" href="productos.html?cat=sets"><span class="tile__img tile__img--photo"><img src="imagenes/3.jpg" alt="" width="400" height="400" loading="lazy"></span><span class="tile__body"><strong>Sets y kits para regalar</strong><span class="tile__cta">¡Comprar aquí!</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container"><div class="promostrip" data-promo-strip></div></div>
 
     <section class="section" id="categorias" aria-labelledby="cats-title">
       <div class="container">
@@ -139,6 +230,8 @@
   <script src="js/components.js"></script>
   <script src="js/catalog.js"></script>
   <script src="js/cookies.js"></script>
+  <script src="js/promo.js"></script>
+  <script src="js/carousel.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
