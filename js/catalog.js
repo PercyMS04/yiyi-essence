@@ -105,8 +105,11 @@
     var catBox = $("[data-home-cats]");
     if (catBox) {
       catBox.innerHTML = CATS.map(function (c) {
-        return '<a class="catcard" href="' + Y.UI.catUrl(c.id) + '"><span class="catcard__icon">' + Y.UI.icon(c.icon || "sparkle", 30) + "</span>" +
-          "<strong>" + esc(c.name) + "</strong><small>" + esc(c.blurb || "") + "</small></a>";
+        var media = c.image
+          ? '<span class="catcard__img"><img src="' + esc(U.url(c.image)) + '" alt="" width="400" height="400" loading="lazy" decoding="async"></span>'
+          : '<span class="catcard__img catcard__img--icon"><span class="catcard__icon">' + Y.UI.icon(c.icon || "sparkle", 38) + "</span></span>";
+        return '<a class="catcard catcard--img" href="' + Y.UI.catUrl(c.id) + '">' + media +
+          '<span class="catcard__body"><strong>' + esc(c.name) + "</strong><small>" + esc(c.blurb || "") + "</small></span></a>";
       }).join("");
     }
     var inStock = ALL.filter(function (p) { return p.stock > 0; });
@@ -327,7 +330,7 @@
       '<a href="' + Y.UI.catUrl(p.category) + '">' + esc(catName) + '</a><span aria-hidden="true">/</span><span aria-current="page">' + esc(p.name) + "</span>";
 
     root.innerHTML =
-      '<div class="pdp__media"><img src="' + esc(Y.UI.imgSrc(p)) + '" alt="' + esc(p.name + " – " + p.brand) + '" width="720" height="720" fetchpriority="high">' +
+      '<div class="pdp__media' + (Y.UI.isPhoto(p) ? " pdp__media--photo" : "") + '"><img src="' + esc(Y.UI.imgSrc(p)) + '" alt="' + esc(p.name + " – " + p.brand) + '" width="720" height="720" fetchpriority="high">' +
         '<span class="badges">' + (pct ? '<span class="badge badge--sale">-' + pct + "%</span>" : "") + (Y.UI.isNew(p) ? '<span class="badge badge--new">Nuevo</span>' : "") + "</span></div>" +
       '<div class="pdp__info">' +
         '<p class="pdp__brand"><a href="' + U.url("productos.html?brand=" + encodeURIComponent(p.brand)) + '">' + esc(p.brand) + "</a> · " +

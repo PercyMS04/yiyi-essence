@@ -168,6 +168,8 @@
   }
 
   function imgSrc(p) { return U.url(p.image); }
+  /* Foto real (jpg/png/webp) vs ilustración .svg: las fotos van sobre fondo blanco */
+  function isPhoto(p) { return !/\.svg(\?|$)/i.test(p.image || ""); }
   function productUrl(p) { return U.url("producto.html?id=" + encodeURIComponent(p.id)); }
   function catUrl(id) { return U.url("productos.html?cat=" + encodeURIComponent(id)); }
 
@@ -181,7 +183,7 @@
     if (out) badges += '<span class="badge badge--out">Agotado</span>';
     return (
       '<article class="card' + (out ? " is-out" : "") + '" data-id="' + esc(p.id) + '">' +
-        '<a class="card__media" href="' + productUrl(p) + '" tabindex="-1" aria-hidden="true">' +
+        '<a class="card__media' + (isPhoto(p) ? " card__media--photo" : "") + '" href="' + productUrl(p) + '" tabindex="-1" aria-hidden="true">' +
           '<img src="' + esc(imgSrc(p)) + '" alt="" width="480" height="480" loading="lazy" decoding="async">' +
           (badges ? '<span class="badges">' + badges + "</span>" : "") +
         "</a>" +
@@ -740,6 +742,6 @@
   Y.UI = {
     icon: icon, toast: toast, productCard: productCard, openLayer: openLayer, closeLayer: closeLayer,
     closeAll: closeAll, applyConfigToDom: applyConfigToDom, isNew: isNew, stockInfo: stockInfo,
-    productUrl: productUrl, catUrl: catUrl, imgSrc: imgSrc, init: init,
+    productUrl: productUrl, catUrl: catUrl, imgSrc: imgSrc, isPhoto: isPhoto, init: init,
   };
 })();

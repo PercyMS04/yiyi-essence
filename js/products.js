@@ -27,10 +27,10 @@
 /* Categorías: puedes agregar más líneas. "ofertas" es especial: muestra
    automáticamente los productos que tienen oldPrice mayor que price. */
 window.YIYI_CATEGORIES = [
-  { id: "maquillaje", name: "Maquillaje", icon: "lips", blurb: "Labios, rostro, ojos y uñas." },
-  { id: "skincare", name: "Skincare", icon: "drop", blurb: "Sérums, hidratantes y protección diaria." },
-  { id: "cuidado-facial", name: "Cuidado facial", icon: "leaf", blurb: "Limpieza, tónicos y mascarillas." },
-  { id: "cuidado-corporal", name: "Cuidado corporal", icon: "petal", blurb: "Cremas, exfoliantes y brumas." },
+  { id: "maquillaje", name: "Maquillaje", image: "imagenes/categorias/maquillaje.jpg", icon: "lips", blurb: "Labios, rostro, ojos y uñas." },
+  { id: "skincare", name: "Skincare", image: "imagenes/categorias/skincare.jpg", icon: "drop", blurb: "Sérums, hidratantes y protección diaria." },
+  { id: "cuidado-facial", name: "Cuidado facial", image: "imagenes/categorias/cuidado-facial.jpg", icon: "leaf", blurb: "Limpieza, tónicos y mascarillas." },
+  { id: "cuidado-corporal", name: "Cuidado corporal", image: "imagenes/categorias/cuidado-corporal.jpg", icon: "petal", blurb: "Cremas, exfoliantes y brumas." },
   { id: "cabello", name: "Cabello", icon: "wave", blurb: "Shampoo, mascarillas y aceites." },
   { id: "fragancias", name: "Perfumes y fragancias", icon: "flask", blurb: "Aromas florales, cálidos y frescos." },
   { id: "accesorios", name: "Accesorios", icon: "brush", blurb: "Brochas, esponjas y herramientas." },
@@ -79,7 +79,7 @@ window.YIYI_PRODUCTS = [
     added: "2026-06-30",
     size: "30 ml",
     description: "Base de cobertura media con acabado luminoso. Disponible en varios tonos (consulta por WhatsApp).",
-    image: "assets/images/products/base-fluida-luminosa.svg",
+    image: "imagenes/productos/base-fluida-luminosa.jpg",
   },
   {
     id: "rubor-crema-petalo",
@@ -121,7 +121,7 @@ window.YIYI_PRODUCTS = [
     added: "2026-05-18",
     size: "9 ml",
     description: "Máscara de color negro con cepillo flexible para separar y definir las pestañas.",
-    image: "assets/images/products/mascara-pestanas-volumen.svg",
+    image: "imagenes/productos/mascara-pestanas-volumen.jpg",
   },
   {
     id: "polvo-compacto-traslucido",
@@ -204,7 +204,7 @@ window.YIYI_PRODUCTS = [
     added: "2026-09-02",
     size: "50 ml",
     description: "Protector solar facial de toque seco. Reaplicar según las indicaciones del envase.",
-    image: "assets/images/products/protector-solar-fps50.svg",
+    image: "imagenes/productos/protector-solar-fps50.jpg",
   },
   {
     id: "contorno-ojos",
@@ -272,7 +272,7 @@ window.YIYI_PRODUCTS = [
     added: "2026-07-01",
     size: "150 ml",
     description: "Tónico facial de textura acuosa, formulado sin alcohol.",
-    image: "assets/images/products/tonico-facial-suave.svg",
+    image: "imagenes/productos/tonico-facial-suave.jpg",
   },
 
   /* ---------------- Cuidado corporal ---------------- */

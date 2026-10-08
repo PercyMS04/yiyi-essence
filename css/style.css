@@ -681,3 +681,26 @@ code { background: var(--blush); padding: 0.1em 0.4em; border-radius: 6px; font-
   .carousel--cards .carousel__track { transition: none; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ==========================================================================
+   FOTOS REALES: productos y categorías con imagen (estilo tienda comercial)
+   ========================================================================== */
+
+/* Producto con foto: fondo blanco, producto completo y centrado */
+.card__media--photo, .pdp__media--photo { background: #fff; }
+.card__media--photo img { object-fit: contain; padding: 8%; mix-blend-mode: multiply; }
+.pdp__media--photo img { object-fit: contain; padding: 6%; mix-blend-mode: multiply; }
+.card__media--photo::after { content: ""; position: absolute; inset: 0; box-shadow: inset 0 -1px 0 var(--line); pointer-events: none; }
+.cartline__img img { object-fit: contain; background: #fff; }
+.card__brand { font-weight: 600; font-size: 0.8rem; }
+
+/* Categorías con imagen */
+.catcard--img { padding: 0; overflow: hidden; gap: 0; align-items: stretch; }
+.catcard__img { display: block; aspect-ratio: 1 / 0.9; background: var(--blush); overflow: hidden; }
+.catcard__img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.catcard--img:hover .catcard__img img { transform: scale(1.07); }
+.catcard__img--icon { display: grid; place-items: center; background: linear-gradient(135deg, #fbeff0, #f1e6f3); }
+.catcard:nth-child(3n+2) .catcard__img--icon { background: linear-gradient(135deg, #f1ecf8, #e3d8f0); }
+.catcard:nth-child(3n) .catcard__img--icon { background: linear-gradient(135deg, #fbf3e4, #efe0c3); }
+.catcard--img .catcard__icon { width: 74px; height: 74px; margin: 0; background: rgba(255, 255, 255, 0.85); }
+.catcard__body { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px 16px; }
